@@ -6,6 +6,7 @@ body{
     margin: 0;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
     color: #333;
+    -webkit-font-smoothing: antialiased;
 }
 a{
     text-decoration: none;
@@ -73,7 +74,7 @@ button{
 .header-search-btn{
     padding: 0 20px;
     vertical-align: middle;
-    margin-left: 0;
+    margin-left: -4px;
     width: 68px;
     height: 37px;
     font-size: inherit;
@@ -96,7 +97,7 @@ button{
     color: #fff;
     background-color: #1e1e1e;
 }
-.header-content-bottom{
+.header-box-bottom{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -110,28 +111,28 @@ button{
     justify-content: space-between;
     height: 40px;
 }
-.header-list.left{
+.header-list.navi{
     width: 564px;
 }
-.header-list.right{
+.header-list.infolink{
     width: 341px;
 }
-.header-list .navi-item-left{
+.header-list .navi-item{
     margin-right: 40px;
     padding-bottom: 18px;
     color: #333;
     font-size: 16px;
     font-weight: 400;
 }
-.header-list .navi-item-left:nth-child(6){
+.header-list .navi-item:nth-child(6){
     margin-right: 0;
 }
-.header-list.left img{
+.header-list.navi img{
     width: 20px;
     height: 20px;
     margin-right: 8px;
 }
-.header-list.right .navi-item-right{
+.header-list.infolink .infolink-item{
     display: flex; 
     align-items: center;
     color: #858585;
@@ -140,16 +141,265 @@ button{
     font-weight: 400;
     padding-bottom: 18px;
 }
-.navi-item-right .navi-icon-right{
+.infolink-item .infolink-icon{
     width: 17px;
     height: 20px;
     margin-right: 8px;
 }
-.navi-item-right .navi-icon-right-feishu{
+.infolink-item .infolink-icon-feishu{
     width: 20px;
     height: 20px;
     margin-right: 8px;
 }
 .banner-section{
-    height: 379.99px;
+    position: relative;
+    height: 380px;
+    background-color: #252222;
+}
+.banner-container{
+    height: 380px;
+
+}
+
+.banner-carousel{
+    background-image: url(https://assets.jiker.com/_for_plus_sub_project/2020/0608/admin/vjUW9OZGtT2koeBO9sNdUvxCSqLauPYYpnmWDWV0.png);
+    background-size: 1920px 380px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 100%;
+    padding: 10px 66px;
+    width: 100%;
+    display: block;
+}
+
+.banner-menu-container .menu-list{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 100;
+}
+.banner-menu-item{
+    height: 40px;
+    width: 210px;
+}
+
+.menu-list .menu-item-nav{
+    padding-left: 20px;
+    height: 40px;
+    width: 210px;
+    color: #fff;
+    background-color: rgba(37,34,34,.5);
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.banner-menu-item:hover .menu-item-nav{
+    background-color: rgba(18,18,19,.7);
+    cursor: pointer;
+}
+
+.menu-item-name{
+    font-size: 14px;
+}
+.menu-list .menu-item-nav::after{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: url(https://www.jiker.com/_nuxt/img/c25d52e.svg) no-repeat 0 0;
+    background-size: 9px 9px;
+    transform: translateY(-50%);
+}
+.banner-menu-item:hover .menu-item-list{
+    display: flex;
+}
+.menu-item-list{
+    position: absolute;
+    /* display: flex; */
+    /* opacity: 0; */
+    transition: all .5s;
+    display: none;
+    /*  set to display: none;, which means it is initially hidden.  */
+    left: 210px;
+    top: 0;
+    width: 722px;
+    min-height: 360px;
+    background: #222;
+    z-index: 100;
+}
+.menu-item-list .menu-item-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(34,34,34,.1) 366px,hsla(0,0%,100%,.3));
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+.menu-item-catalog-box{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* 换行，default :no-wrap */
+    padding: 20px 40px;
+}
+.menu-item-catalog-box .menu-item-catalog-dl{
+    width: 722px;
+    margin-bottom: 28px;
+    color: #fff;
+}
+.menu-item-catalog-box .menu-item-catalog-dl .menu-item-catalog-dt{
+    position: relative;
+    height: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 20px;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.menu-item-catalog-box .menu-item-catalog-dl .menu-item-catalog-dt::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    margin-right: 10px;
+    background-color: #d8d8d8;
+}
+.menu-item-catalog-dd-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+}
+.menu-item-catalog-dd{
+    position: relative;
+    line-height: 20px;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.menu-item-catalog-dd:hover{
+    color: #46ff37;
+}
+.menu-item-catalog-dd::before{
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 14px;
+    background: #8c8c8d;
+}
+.menu-item-catalog-dd:last-child::before{
+    width: 0px;
+    height: 0px;
+
+}
+.banner-ads-right{
+    position: absolute;
+    top: 55px;
+    right: 50%;
+    margin-right: -620px;
+}
+.banner-ads-right img{
+    width: 210px;
+    height: 130px;
+    margin-bottom: 10px;
+    background-size: 100% 100%;
+    background-image: url(https://assets.jiker.com/_for_ad_sub_project/2020/0619/admin/LXxQHaDxwhMFDllJXHBlvkV6Js2kfHZEbw07cmeZ.png);
+}
+.course-section{
+    height: 202px;
+    background-color: #fff;
+    padding: 40px 0;
+}
+.course-container{
+    width: 1240px;
+    height: 122px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.course-ads{
+    width: 925px;
+    font-size: 0;
+}
+.course-ads .course-ads-link{
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background-size: 100% 100%;
+}
+.course-ads-link.kafka{
+    margin-right: 0;
+}
+.course-ads-link.skills{
+    margin-right: 0;
+}
+.course-ads-img{
+    width: 295px;
+    height: 56px;
+}
+.course-groups{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    height: 122px;
+    width: 295px;
+}
+.course-groups-container{
+    position: relative;
+}
+.course-groups-link{
+    display: inline-block;
+    background-size: 100% 100%;
+
+}
+.course-groups-link .course-groups-img{
+    width: 142px;
+    height: 122px;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.course-groups-container:hover .course-groups-qr{
+    opacity: 1;
+}
+.course-groups-qr{
+    opacity: 0;
+    /* overflow: hidden; */
+    /* display: none; */
+    transition: all .1s;
+    position: absolute;
+    width: 160px;
+    height: 205px;
+    overflow: hidden;
+    bottom: 54px;
+    left: -9px;
+    /* z-index: 300; */
+    text-align: center;
+    background-image: url(https://www.jiker.com/_nuxt/img/21ce563.svg);
+}
+.course-groups-qr-title{
+    font-size: 11px;
+    padding: 15px 0 6px;
+}
+.course-groups-qr img{
+    width: 120px;
+    height: 120px;
 }
