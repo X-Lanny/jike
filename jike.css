@@ -511,23 +511,23 @@ button{
     font-size: 14px;
     color: #666;
 }
-.section-icon{
+.black-arrow-icon-container{
     font-size: 14px;
     color: #666;
     line-height: 20px;
 }
-.section-icon .hotcareer-subtitle-link{
+.black-arrow-icon-container .hotcareer-subtitle-link{
     display: flex;
     align-items: center;
 }
-.section-black-arrow{
+.black-arrow-icon{
     width: 16px;
     height: 16px;
     display: inline-block;
     background: url(https://www.jiker.com/_nuxt/img/36330ef.svg);
     background-repeat: no-repeat;
 }
-.section-icon .section-black-arrow{
+.black-arrow-icon-container .black-arrow-icon{
     margin-left: 10px;
 }
 .hotcareer-link-box{
