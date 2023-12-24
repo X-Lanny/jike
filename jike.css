@@ -924,6 +924,186 @@ button{
     width: 144px;
     height: 44px;
     border: 1px solid #999;
+    font-size: 14px;
     color: #666;
     cursor: pointer;
+}
+.black-arrow-icon.btn{
+    margin-left: 10px;
+}
+.footer-section{
+    height: 451px;
+    padding: 50px 100px 57px;
+    background-color: #252222;
+    text-align: center;
+    font-weight: 400;
+}
+.footer-container{
+    width: 1240px;
+    height: 344px;
+    /* padding: 0 auto; */
+    margin: 0 auto;
+}
+.footer-container-top{
+    height: 290px;
+    display: flex;
+    padding-bottom: 34px;
+    border-bottom: 1px solid #414141;
+}
+.footer-container-top .logo-container{
+    margin-right: 128px;
+    text-align: left;
+}
+.footer-container-top .logo-container .logo-img{
+    height: 70px;
+    width: 156px;
+    margin-bottom: 15px;
+}
+.footer-container-top .logo-container .logo-desc{
+    height: 17px;
+    margin-bottom: 40px;
+    line-height: 17px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #bbb;
+}
+.footer-container-top .logo-container .logo-title{
+    height: 22px;
+    margin-bottom: 6px;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+}
+.footer-container-top .logo-container .logo-phonenum{
+    height: 28px;
+    margin-bottom: 11px;
+    line-height: 28px;
+    font-size: 20px;
+    color: #d5d5d5;
+}
+.footer-container-top .footer-btn{
+    height: 43px;
+    width: 144px;
+    margin-bottom: 8px;
+    line-height: 43px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+}
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+    text-align: left;
+}
+.nav-container .nav-list{
+    display: flex;
+    margin-bottom: 20px;
+}
+.nav-container .nav-list .nav-title{
+    height: 22px;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 20px;
+    color: #fff;
+}
+.nav-container .nav-list .navi-item{
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 12px;
+    line-height: 20px;
+    color: #d5d5d5;
+}
+.institution-container{
+    width: 383px;
+    height: 122px;
+    margin-right: 54px;
+}
+.institution-container .institution-logo-box{
+    display: flex;
+    flex-wrap: wrap;
+    /* 换行 */
+    width: 383px;
+}
+.footer-title{
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: left;
+}
+.institution-container .institution-logo-box img{
+    height: 25px;
+    width: auto;
+    margin-bottom: 5px;
+}
+.serve-container{
+    text-align: left;
+    width: 144px;
+}
+.serve-container .serve-icon{
+    position: relative;
+    top: 2px;
+    width: 18px;
+    height: 15px;
+    margin-right: 6px;
+    display: inline-block;
+}
+.serve-container .serve-btn{
+    width: 144px;
+    margin-bottom: 8px;
+}
+.serve-container .serve-icon.enterprise{
+    background-image: url(https://www.jiker.com/_nuxt/img/5399c3d.svg);
+}
+.serve-container .serve-icon.unviersity{
+    background-image: url(https://www.jiker.com/_nuxt/img/684aa50.svg);
+}
+.serve-container .serve-desc{
+    font-size: 12px;
+    line-height: 17px;
+    color: #d5d5d5;
+    margin-bottom: 20px;
+}
+.footer-container-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+.social-icon-box{
+    width: 146px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-icon-box .social-icon{
+    width: 32px;
+    height: 32px;
+    margin-right: 25px;
+}
+.social-icon-box .social-icon.weibo{
+    background: url(https://www.jiker.com/_nuxt/img/56b6ce7.svg); 
+}
+.social-icon-box .social-icon.twitter{
+    background: url(https://www.jiker.com/_nuxt/img/8e3e38a.svg);
+}
+.social-icon-box .social-icon.github{
+    margin-right: 0;
+    background: url(https://www.jiker.com/_nuxt/img/4297efa.svg);
+}
+.footer-container-bottom .copyright-info-box{
+    height: 17px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 17px;
+    color: #8e8e8e;
+}
+.footer-container-bottom .copyright-info-box a{
+    color: #8e8e8e;
 }
