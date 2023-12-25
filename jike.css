@@ -8,6 +8,8 @@ body{
     color: #333;
     -webkit-font-smoothing: antialiased;
     background-color: rgb(245, 245, 245);
+    min-width: 1440px;
+    /* flex: auto; */
 }
 a{
     text-decoration: none;
@@ -21,7 +23,7 @@ button{
 }
 .page-header{
     height: 110px;
-    width: 100%;
+    /* width: 100%; */
     font-weight: 400;
     background-color: #fff;
     box-shadow: 0 0 10px 0 rgba(0,0,0,.05);
@@ -379,12 +381,15 @@ button{
 }
 
 .course-groups-container:hover .course-groups-qr{
-    opacity: 1;
+    /* opacity: 1; */
+    /* 使用 opacity:0 和 1 的结果，hover的效果应用范围是整个.course-groups-container的范围 */
+    display: block;
 }
 .course-groups-qr{
-    opacity: 0;
+    /* opacity: 0; */
     /* overflow: hidden; */
-    /* display: none; */
+    display: none;
+    /* 使用display：none --- block ，hover的应用效果与原*/
     transition: all .1s;
     position: absolute;
     width: 160px;
@@ -511,23 +516,23 @@ button{
     font-size: 14px;
     color: #666;
 }
-.black-arrow-icon-container{
+.common-black-arrow-icon{
     font-size: 14px;
     color: #666;
     line-height: 20px;
 }
-.black-arrow-icon-container .hotcareer-subtitle-link{
+.common-black-arrow-icon .hotcareer-subtitle-link{
     display: flex;
     align-items: center;
 }
-.black-arrow-icon{
+.black-arrow-icon-img{
     width: 16px;
     height: 16px;
     display: inline-block;
     background: url(https://www.jiker.com/_nuxt/img/36330ef.svg);
     background-repeat: no-repeat;
 }
-.black-arrow-icon-container .black-arrow-icon{
+.common-black-arrow-icon .black-arrow-icon-img{
     margin-left: 10px;
 }
 .hotcareer-link-box{
@@ -559,7 +564,7 @@ button{
     height: 30px;
     margin-bottom: 30px;
 }
-.hotcareer-intro{
+.hotcareer-content{
     padding: 17px 25px 30px;
     height: 190px;
     width: 295px;
@@ -568,19 +573,19 @@ button{
     color: #333;
     font-size: 14px;
 }
-.hotcareer-intro-title{
+.hotcareer-title{
     display: flex;
     /* justify-content: space-between; */
     font-size: 14px;
     line-height: 20px;
     color: #333;
 }
-.hotcareer-intro-day{
+.hotcareer-day{
     width: 57.31px;
     display: flex;
     justify-content: space-between;
 }
-.hotcareer-intro-icon{
+.hotcareer-icon{
     width: 16px;
     height: 16px;
     display: inline-block;
@@ -592,29 +597,29 @@ button{
     position: relative;
     color: #999;
 }
-.hotcareer-intro-date{
+.hotcareer-date{
     padding-right: 0;
 }
-.hotcareer-intro-content{
+.hotcareer-desc{
     height: 60px;
     margin: 13px 0 18px;
     font-size: 14px;
     line-height: 20px;
     color: #999;
 }
-.hotcareer-intro-ft{
+.hotcareer-info{
     display: flex;
     height: 32px;
     align-items: center;
     font-size: 14px;
     line-height: 32px;
 }
-.hotcareer-intro-analysis{
+.hotcareer-info-img{
     height: 16px;
     width: 16px;
     margin-right: 10px;
 }
-.hotcareer-intro-ft-title{
+.hotcareer-info-title{
     width: 245px;
 }
 .career-box{
@@ -766,7 +771,7 @@ button{
     padding: 0 25px;
 }
 .video-item-category-item{
-    margin-right: 0;
+    margin-right: 6px;
     height: 26px;
     padding: 0 10px;
     background-color: hsla(0,0%,100%,.59);
@@ -801,6 +806,12 @@ button{
     margin-bottom: 12px;
     overflow: hidden;
     /* 用于控制容器元素中的溢出内容的显示方式。具体而言，它会隐藏容器中溢出的内容，并且不会显示滚动条 */
+    text-overflow: ellipsis;
+    /* 属性控制文本溢出时的表现。ellipsis 是一个值，表示使用省略号 (...) 来表示被截断的文本。 */
+    white-space: nowrap;
+    /* white-space 属性控制文本的空白处理方式。nowrap 是一个值，表示文本不换行，始终保持在一行上。
+    */
+    /* 这两个属性通常一起使用，用于在容器中以单行显示文本，并在文本溢出时使用省略号来表示。这在需要显示有限空间内的长文本内容时很常见，以避免文本溢出影响布局。 */
 }
 .video-item-info{
     color: #999;
@@ -928,7 +939,7 @@ button{
     color: #666;
     cursor: pointer;
 }
-.black-arrow-icon.btn{
+.black-arrow-icon-img.btn{
     margin-left: 10px;
 }
 .footer-section{
